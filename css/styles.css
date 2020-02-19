@@ -5,19 +5,56 @@
 
 body {
   background: #fcc;
-} 
+}
 
+nav{
+  flex-direction: column;
+  display: none;
+  background: #535760;
+  justify-content: center;
+  clear: both;
+  color: white;
+}
 
+.menu{
+  background-color: #535760;
+  color: white;
+  line-height: 2em;
+  text-align: center;
+}
+
+.menu:hover + nav{
+  display: flex;
+}
+
+nav a{
+  color: white;
+  text-align: center;
+}
 
 /* TABLET STYLES */
 
 @media screen and (min-width: 500px) {
 
   /* applies to screens wider than 499px */
-  
+
   body {
     background: #cfc;
-  } 
+  }
+
+  .menu{
+    display: none;
+  }
+
+  nav{
+    display: flex;
+    flex-direction: row;
+  }
+
+  nav a:hover{
+    color: white;
+    background: #535760;
+  }
 }
 
 
@@ -30,5 +67,5 @@ body {
 
   body {
     background: #ccf;
-  } 
+  }
 }
